@@ -472,7 +472,8 @@ section {
     width: 100%;
     justify-items: center;
     margin-bottom: 4rem;
-    align-items: stretch;
+    align-items: start;
+    padding: 2rem;
 }
 
 .project-item {
@@ -491,7 +492,7 @@ section {
     justify-content: flex-start;
     transition: transform 0.2s, box-shadow 0.2s;
     margin: 0;
-    overflow: hidden;
+    overflow: visible;
     box-sizing: border-box;
 }
 

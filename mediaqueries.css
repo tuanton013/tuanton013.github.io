@@ -22,6 +22,13 @@
     }
 }
 
+/* iOS Safari viewport height fix */
+@supports (-webkit-touch-callout: none) {
+    section {
+        min-height: -webkit-fill-available;
+    }
+}
+
 /* Mobile Devices - Portrait */
 @media screen and (max-width: 480px) {
     .section-container {
@@ -70,8 +77,33 @@
     .project-item {
         max-width: none;
         width: 100%;
-        min-height: 350px;
+        min-height: auto;
+        height: auto;
         margin: 0;
+        padding: 1.5rem;
+    }
+
+    .project-image {
+        height: 160px;
+        margin-bottom: 1rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-item p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .project-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        margin-top: auto;
     }
 
     .projects-title,
@@ -90,6 +122,63 @@
         margin-top: 1rem;
         font-size: 1rem;
         padding: 0 1rem;
+    }
+}
+
+/* iPhone 15 Pro and similar devices (390px - 430px width) */
+@media screen and (min-width: 390px) and (max-width: 430px) {
+    #projects .section-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+
+    .project-item {
+        max-width: none;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .project-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        flex-shrink: 0;
+    }
+
+    .project-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+        display: block;
+    }
+
+    .project-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+
+    .projects-title {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
     }
 }
 
